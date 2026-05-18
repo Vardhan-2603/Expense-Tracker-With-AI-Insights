@@ -1,12 +1,12 @@
 import React from 'react'
 import {createBrowserRouter,RouterProvider} from 'react-router'
-import Rootlayout from './Components/Rootlayout'
-import Home from './Components/Home'
-import Dashbord from './Components/Dashbord'
-import Ai_insights from './Components/Ai_insights'
-import Reports from './Components/Reports'
-import Login from './Components/Login'
-import Signup from './Components/signup'
+import Rootlayout from './Components/Rootlayout.jsx'
+import Home from './Components/Home.jsx'
+import Dashboard from './Components/Dashboard.jsx'
+import Ai_insights from './Components/Ai_insights.jsx'
+import Reports from './Components/Reports.jsx'
+import Login from './Components/Login.jsx'
+import Signup from './Components/signup.jsx'
 
 
 function App() {
@@ -20,25 +20,29 @@ function App() {
           element: <Home />
         },
         {
-          path: 'Dashbord',
-          element: <Dashbord />
-        },
-        {
-          path: 'reports',
-          element: <Reports />
-        },
-        {
-          path: 'Ai_insights',
-          element: <Ai_insights />
-        },
-        {
-          path:'Login',
-          element:<Login/>
-        },
-        {
-          path:'signup',
-          element:<Signup/>
-        }
+  path: 'dashboard',
+  element: <Dashboard />
+},
+
+{
+  path: 'reports',
+  element: <Reports />
+},
+
+{
+  path: 'ai-insights',
+  element: <Ai_insights />
+},
+
+{
+  path: 'login',
+  element: <Login />
+},
+
+{
+  path: 'signup',
+  element: <Signup />
+}
       ]
     }
   ])

@@ -1,45 +1,102 @@
 import { useNavigate } from "react-router";
 
 function Home() {
-
   const navigate = useNavigate();
 
-  const goToLogin = () => {
-    navigate("/Login");
-  };
-
-  const gotoSignup=()=>{
-    navigate("/Signup")
-  }
-
   return (
-    <div className="min-h-screen w-full  flex flex-col justify-center items-center  bg-linear-to-r from-blue-500 via-purple-500 to-indigo-600 text-white">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-600 px-6">
 
-      <h1 className="text-4xl font-bold mb-6">
-        Smart Expense Tracker
-      </h1>
+      <div className="max-w-3xl text-center text-white">
 
-      <p className="max-w-xl text-center text-lg mb-6">
-        Track your daily expenses easily and understand where your money goes.
-        Our application helps you monitor spending habits, view graphical
-        reports, and manage your savings more effectively.
-      </p>
+        {/* Heading */}
+        <h1 className="text-5xl font-extrabold mb-6 drop-shadow-lg">
+          Smart Expense Tracker
+        </h1>
 
-      <div className="bg-white text-gray-800 p-6 rounded-lg shadow-lg max-w-md">
-        <h2 className="text-xl font-semibold mb-3">
-          Why Use This App?
-        </h2>
+        {/* Description */}
+        <p className="text-lg md:text-xl leading-relaxed text-gray-100 mb-10">
+          Track your daily expenses, monitor your spending habits,
+          and manage your savings efficiently with smart analytics
+          and beautiful visual reports.
+        </p>
 
-        <ul className="list-disc pl-5 space-y-2">
-          <li>Track your daily income and expenses</li>
-          <li>View expense graphs and spending trends</li>
-          <li>Analyze increase or decrease in spending</li>
-          <li>Improve your savings habits</li>
-        </ul>
-      </div>         
-      <button onClick={goToLogin} className="mt-6 bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200">Start Tracking </button>
-      <p className="max-w-xl text-center text-lg mt-6 font-semibold">don't have account,create an account</p>
-      <button onClick={gotoSignup} className=" bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200">create account </button>
+        {/* Features Section */}
+        <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 mb-10">
+
+          <h2 className="text-2xl font-bold mb-6">
+            Why Choose Our App?
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-5 text-left">
+
+            <div className="bg-white/10 p-4 rounded-xl">
+              <h3 className="font-semibold text-lg mb-2">
+                💰 Expense Tracking
+              </h3>
+
+              <p className="text-gray-100">
+                Easily record and organize your daily expenses.
+              </p>
+            </div>
+
+            <div className="bg-white/10 p-4 rounded-xl">
+              <h3 className="font-semibold text-lg mb-2">
+                📊 Visual Reports
+              </h3>
+
+              <p className="text-gray-100">
+                Analyze spending with charts and graphical insights.
+              </p>
+            </div>
+
+            <div className="bg-white/10 p-4 rounded-xl">
+              <h3 className="font-semibold text-lg mb-2">
+                📈 Spending Analysis
+              </h3>
+
+              <p className="text-gray-100">
+                Understand increases and decreases in expenses.
+              </p>
+            </div>
+
+            <div className="bg-white/10 p-4 rounded-xl">
+              <h3 className="font-semibold text-lg mb-2">
+                🎯 Savings Goals
+              </h3>
+
+              <p className="text-gray-100">
+                Improve financial habits and manage savings better.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-5">
+
+          <button
+            onClick={() => navigate("/Login")}
+            className="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300"
+          >
+            Start Tracking
+          </button>
+
+          <button
+            onClick={() => navigate("/Signup")}
+            className="border-2 border-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-blue-600 hover:scale-105 transition duration-300"
+          >
+            Create Account
+          </button>
+
+        </div>
+
+        {/* Footer Text */}
+        <p className="mt-8 text-gray-200">
+          Start your journey towards smarter financial management today.
+        </p>
+
+      </div>
     </div>
   );
 }

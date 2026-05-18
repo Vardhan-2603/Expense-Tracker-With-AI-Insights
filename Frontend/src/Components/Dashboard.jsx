@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Dashbord() {
+function Dashboard() {
 
   const [expenses, setExpenses] = useState([
     { id: 1, category: "Food & Drinks", title: "Burger", amount: 10 },
@@ -200,4 +200,4 @@ function Dashbord() {
   );
 }
 
-export default Dashbord;
+export default Dashboard;

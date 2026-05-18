@@ -30,7 +30,7 @@ function Header() {
           </li>
 
           <li>
-            <NavLink to="/Dashbord">Dashboard</NavLink>
+           <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
 
           <li>
@@ -38,7 +38,7 @@ function Header() {
           </li>
 
           <li>
-            <NavLink to="/Ai_insights">Ai_insights</NavLink>
+           <NavLink to="/ai-insights">AI-Insights</NavLink>
           </li>
 
           {/* ✅ CONDITIONAL RENDERING */}

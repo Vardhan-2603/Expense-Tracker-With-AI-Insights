@@ -1,21 +1,53 @@
-import React from 'react'
+import { useState} from "react";
+import { useNavigate,useLocation } from "react-router";
+import axios from "axios";
+import {useForm} from "react-hook-form";
+import { NavLink } from "react-router";
+
 
 function Signup() {
-   return (
-    <div className="min-h-screen flex justify-center items-start pt-24">
-      <div className="bg-gray-200 p-6 rounded-lg shadow-lg max-w-md w-full">
-        <h1 className="text-2xl font-bold text-center mb-4">signup</h1>
-        <form className="flex flex-col gap-5">
-          <input type="text" className="border p-2 rounded" placeholder="first name"/>
-          <input type="text" className="border p-2 rounded" placeholder="last name"/>
-          <input type="text" className="border p-2 rounded" placeholder="e-mail"/>
-          <input type="password" className="border p-2 rounded" placeholder="passowrd"/>
-          <button type="submit"  className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">signup </button>
-        </form>
-      </div>
+  const navigate=useNavigate();
 
+  const [userData,setUserData]=useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:""
+  })
+
+  const [Error,setError]=useState("");
+  const [loading,setLoading]=useState(false);
+
+  const onSubmit=async(e)=>{
+    e.preventDefault();
+
+    setError("");
+    setLoading(true);
+
+    try{
+      const res=await axios.post(
+        "http://localhost:4000/user-api/users",
+        userData,
+        {
+          withCredentials:true,
+        }
+      );
+      navigate("/login");
+    }catch(err){
+      console.log(err);
+    }finally{
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit()}>
+      {/* username */}
+      
+      </form>
     </div>
-  );
+  )
 }
 
 export default Signup

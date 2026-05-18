@@ -3,10 +3,10 @@ POST http://localhost:4000/user-api/users
 Content-Type: application/json
 
 {
-    "firstName":"user2",
-    "lastName":"2",
-    "email":"user2@",
-    "password":"passss",
+    "firstName":"jhon",
+    "lastName":"wick",
+    "email":"jw@gmail.com",
+    "password":"jw12",
     "profileImageUrl":"kasbckaj"
 }
 
@@ -15,8 +15,8 @@ POST http://localhost:4000/user-api/login
 Content-Type: application/json
 
 {
-     "email":"user2@",
-     "password":"passss"
+     "email":"user2@gmail.com",
+     "password":"pass"
 }
 
 ###logout user
